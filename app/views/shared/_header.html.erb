@@ -1,0 +1,21 @@
+<header class="navbar navbar-inverse">
+  <div class="brand">
+    <%= link_to "flagg", root_path %>
+  </div>
+  <div class="container">
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li class="lead"><%= link_to current_user.email %></li>
+          <li><%= link_to "Create Flag", new_flag_path %></li>
+          <li>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+          </li>
+          <li><%= link_to 'Settings', edit_user_registration_path(current_user) %></li>
+        <% else %>
+          <li><%= link_to "Log in", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

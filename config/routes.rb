@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   resources :organizations
+  resources :flags
   root "organizations#index"
 end
