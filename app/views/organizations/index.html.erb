@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>All Organizations</h1>
+  <% @organizations.each do |org| %>
+    <strong>Name: </strong><%= org.name %><br>
+    <strong>Email: </strong><%= org.email %><br>
+    <strong>Phone: </strong><%= org.phone %><br>
+    <strong>Bio: </strong><%= org.bio %>
+    <hr>
+  <% end %>
+  <%= link_to 'Logout', destroy_user_session_path,:method => :delete %>
+</div>
