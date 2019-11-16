@@ -7,4 +7,5 @@
     <strong>Bio: </strong><%= org.bio %>
     <hr>
   <% end %>
+  <%= link_to 'Logout', destroy_user_session_path,:method => :delete %>
 </div>
