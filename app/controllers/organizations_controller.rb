@@ -10,6 +10,8 @@ class OrganizationsController < ApplicationController
   end
 
   def show
+    @org = Organization.find_by(id:params[:id])
+    @flags = @org.flags
   end
 
   def destroy
