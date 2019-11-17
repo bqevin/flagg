@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  # devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+ 
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
   devise_scope :user do
-    # get '/users/sign_out' => 'devise/sessions#destroy' 
     authenticated do
       root :to => 'organizations#index', as: :authenticated_root
     end
