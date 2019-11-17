@@ -3,7 +3,7 @@
   <% @organizations.each do |org| %>
   </br>
   <div class="card">
-  <h5 class="card-header"><%= org.name %></h5>
+  <h5 class="card-header"><%= link_to org.name, organization_path(org.flags) %></h5>
   <div class="card-body">
     <h5 class="card-title"><%= org.phone %></h5>
     <p class="card-text"><%= org.bio %></p>

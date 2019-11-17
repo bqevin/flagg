@@ -7,4 +7,5 @@ class User < ApplicationRecord
   belongs_to :organization
   has_many :flags
   validates_presence_of :email, uniqueness: true
+
 end

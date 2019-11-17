@@ -30,7 +30,7 @@ gem 'pry-rails'
 gem 'hirb'
 gem 'bootstrap-sass'
 gem 'pg_search'
-gem 'rails_admin'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -9,10 +9,10 @@ class FlagsController < ApplicationController
 
   def create
     @user = current_user
-    @flag = current_user.flags.build(flag_params)
-    if @flag.save
+    @flag = current_user.flags.create(flag_params)
+    if @flag
       flash[:success] = "Flag created successfully"
-      redirect_to root_path
+      redirect_to organizations_path
     else
       flash[:danger] = "Flag was not created. Please try again"
       render :new
@@ -28,6 +28,6 @@ class FlagsController < ApplicationController
 
   private
     def flag_params
-      params.require(:flag).permit(:title, :description, :active, :user_id, :organization_id)
+      params.require(:flag).permit(:title, :description)
     end
 end

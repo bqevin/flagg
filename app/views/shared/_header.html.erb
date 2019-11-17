@@ -1,18 +1,14 @@
 <header class="navbar navbar-inverse">
-  <div class="brand">
-    <%= link_to "flagg", organizations_path %>
-  </div>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal"><%= link_to "flagg", root_path %></h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <ul class="nav navbar-nav navbar-right">
-    % if user_signed_in? %>
-    <li><%= link_to "Create Flag", new_flag_path, class: "p-2 text-dark" %></li>
-    <li><%= link_to "Search Flag", flags_path %></li>
-    <li><%= link_to 'Settings', edit_user_registration_path(current_user), class: "p-2 text-dark" %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to "Create Flag", new_flag_path, class: "p-2 text-dark" %></li>
+      <li><%= link_to "Search Flag", flags_path %></li>
+      <li><%= link_to 'Settings', edit_user_registration_path(current_user), class: "p-2 text-dark" %></li>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %>      
     <% end %>
     </ul>
   </nav>
-  <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %>
 </div>
 </header>
