@@ -1,6 +1,6 @@
 class FlagsController < ApplicationController
   def index
-    @flags = Flag.all
+    @flags = Flag.text_search(params[:query])
   end
 
   def new

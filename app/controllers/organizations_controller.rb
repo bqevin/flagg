@@ -1,6 +1,10 @@
 class OrganizationsController < ApplicationController
   def index
-    @organizations = Organization.all
+    if params[:term]
+      @flag = Flag.search(params[:term])
+    else
+      @organizations = Organization.all
+    end
   end
 
   def new

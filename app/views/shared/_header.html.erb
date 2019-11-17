@@ -8,9 +8,8 @@
         <% if user_signed_in? %>
           <li class="lead"><%= link_to current_user.email %></li>
           <li><%= link_to "Create Flag", new_flag_path %></li>
-          <li>
-            <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-          </li>
+          <li><%= link_to "Search Flag", flags_path %></li>
+          <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'Settings', edit_user_registration_path(current_user) %></li>
         <% end %>
       </ul>

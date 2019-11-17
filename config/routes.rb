@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   devise_scope :user do
-    # root 'devise/sessions#new' 
+    # get '/users/sign_out' => 'devise/sessions#destroy' 
     authenticated do
       root :to => 'organizations#index', as: :authenticated_root
     end

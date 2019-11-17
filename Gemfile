@@ -29,6 +29,7 @@ gem 'devise'
 gem 'pry-rails'
 gem 'hirb'
 gem 'bootstrap-sass'
+gem 'pg_search'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
