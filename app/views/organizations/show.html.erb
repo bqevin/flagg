@@ -1,5 +1,11 @@
-<h1>Organization Profile</h1>
 
-
-<h1>Flags</h1>
-
+<div class="container">
+  <h1>Flags</h1>
+  <% @flags.each do |flag| %>
+    <%= flag.title %><br>
+    <%= flag.description %><br>
+    <%= flag.user.email %><br>
+    <%= flag.user.organization.name %>
+    <hr>
+  <% end %>
+</div>

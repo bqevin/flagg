@@ -1,6 +1,6 @@
 class FlagsController < ApplicationController
   def index
-    @flags = Flag.all
+    @flags = Flag.text_search(params[:query])
   end
 
   def new
@@ -8,7 +8,8 @@ class FlagsController < ApplicationController
   end
 
   def create
-    @flag = Flag.create(flag_params)
+    @user = current_user
+    @flag = current_user.flags.build(flag_params)
     if @flag.save
       flash[:success] = "Flag created successfully"
       redirect_to root_path
