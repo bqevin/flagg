@@ -24,6 +24,9 @@ class FlagsController < ApplicationController
   end
 
   def destroy
+    @flag = Flag.find(params[:id])
+    @flag.destroy
+    redirect_to flags_path(@flag)
   end
 
   private
