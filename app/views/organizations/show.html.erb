@@ -2,10 +2,11 @@
 <div class="container">
   <h1>Flags</h1>
   <% @flags.each do |flag| %>
-    <%= flag.title %><br>
-    <%= flag.description %><br>
-    <%= flag.user.email %><br>
-    <%= flag.user.organization.name %>
+    <strong>Title: </strong><%= flag.title %><br>
+    <strong>Description: </strong><%= flag.description %><br>
+    <strong>Creator: </strong><%= flag.user.first_name %><br>
+    <strong>Organization: </strong><%= flag.user.organization.name %><br>
+    <strong>Created at: </strong><%= flag.created_at %><br>
     <hr>
   <% end %>
 </div>
