@@ -1,0 +1,13 @@
+<div class="container">
+<%= form_for(@flag) do |f| %>
+  <p>
+    <%= f.text_field :title, class:"form-control" %>
+  </p>
+    <p>
+    <%= f.text_area :description, class:"form-control" %>
+  </p>
+  <p>
+    <%= f.submit "Create Flag" %>
+  </p>
+<% end %>
+</div>

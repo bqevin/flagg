@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>All Flags</h1>
+  <% @flags.each do |flag| %>
+    <strong>Title: </strong><%= flag.title %><br>
+    <strong>Description: </strong><%= flag.description %><br>
+    <strong>Author: </strong><%= flag.user.email %><br>
+    <strong>Organization: </strong><%= flag.organization.name %>
+    <hr>
+  <% end %>
+</div>
