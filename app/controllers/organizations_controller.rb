@@ -14,7 +14,7 @@ class OrganizationsController < ApplicationController
   end
 
   def show
-    @org1 = Organization.find_by(id:1)
+    @org1 = Organization.find_by(id:2)
     @flags = @org1.flags
   end
 

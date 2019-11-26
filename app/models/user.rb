@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :organization
-  has_many :flags
+  has_many :flags, dependent: :destroy 
   validates_presence_of :email, uniqueness: true
 
 end
