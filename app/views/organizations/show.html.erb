@@ -5,8 +5,8 @@
     <strong>Title: </strong><%= flag.title %><br>
     <strong>Description: </strong><%= flag.description %><br>
     <strong>Creator: </strong><%= flag.user.first_name %><br>
-    <strong>Organization: </strong><%= flag.user.organization.name %><br>
     <strong>Created at: </strong><%= flag.created_at %><br>
+    <%= link_to 'Delete',  flag,  method: :delete, data: { confirm: 'Are you sure?' } %>
     <hr>
   <% end %>
 </div>
